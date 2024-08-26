@@ -7,9 +7,12 @@ export default defineNuxtConfig({
   postcss: {
     plugins: {
       tailwindcss: {},
-      autoprefixer: {}
-    }
+      autoprefixer: {},
+    },
   },
 
-  modules: ['@nuxt/icon', '@nuxt/image']
+  modules: ['@nuxt/icon', '@nuxt/image', '@pinia/nuxt'],
+  imports: {
+    dirs: ['types', 'stores', 'utils'],
+  },
 })
