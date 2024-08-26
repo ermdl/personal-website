@@ -2,7 +2,12 @@
   <div>
     <div class="text-4xl">Home page</div>
     <div class="grid grid-cols-3 gap-4">
-      <NuxtImg v-for="image in 100" :src="getRandomImage(image)" alt="" />
+      <img
+        v-for="image in 100"
+        loading="lazy"
+        :src="getRandomImage(image)"
+        alt=""
+      />
     </div>
     <NuxtLink to="/about"> </NuxtLink>
   </div>
@@ -10,7 +15,7 @@
 
 <script lang="ts" setup>
 const getRandomImage = (index: number) => {
-  return `https://picsum.photos/1000?random=${index}`
+  return `https://picsum.photos/3000?random=${index}`
 }
 
 onMounted(() => {

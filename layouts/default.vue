@@ -1,6 +1,9 @@
 <template>
   <div>
-    <slot />
+    <Preloader />
+    <main>
+      <slot />
+    </main>
   </div>
 </template>
 
